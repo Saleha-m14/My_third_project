@@ -23,8 +23,11 @@ if user == "yes":
         except ValueError:
             print("Invalid, you are asked to enter a number")
         
-
-        if guess == secret_number:
+        if guess > secret_number:
+            print("Guess lower!")
+        elif guess < secret_number:
+            print("Guess higher!")
+        else:
             print(f"Hey {username} You won!")
             break
     else:
